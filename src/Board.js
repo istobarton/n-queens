@@ -197,7 +197,6 @@
       //create var for board values
       var boardRows = this.rows();
       //loop through the board to check for conflict and decrement the passed to find minor conflict
-      debugger;
       for(var i = 0; i < boardRows.length; i++) {
         if(boardRows[i][minorDiagonalColumnIndexAtFirstRow] === 1) {
           counter++;
