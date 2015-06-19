@@ -18,7 +18,6 @@ window.findNRooksSolution = function(n) {
     for(var i = 0; i < n; i++) {
       solution.togglePiece(i,i);
     }
-  // console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution.rows();
 };
 
@@ -55,18 +54,16 @@ window.findNQueensSolution = function(n) {
   var SHOW = [];
   //create recursive function that take row
   var recurse = function(row){
+    //if the row equals n
     if(row === n){
-  //if the row equals n
     //return solution.rows();
       for(var i = 0; i<solution.rows().length; i++){
         SHOW.push(solution.get(i).slice());
-        // var SHOW = _.map(solution.rows(), function(x){return x})
       }
       return;
     }
     //iterate over the columns less than n
     for(var col = 0; col < n; col++){
-
       //toggle the row/column we're at
       solution.togglePiece(row, col);
       //if there are NO Queen Conflicts
@@ -77,7 +74,6 @@ window.findNQueensSolution = function(n) {
       }
       //else toggle piece
       solution.togglePiece(row, col);
-
     }
   }
 
@@ -94,14 +90,13 @@ window.countNQueensSolutions = function(n) {
   var sC = 0;
   //create recursive function that take row
   var recurse = function(row){
+    //if the row equals n
     if(row === n){
-  //if the row equals n
-    //return solution.rows();
+    //return solutionCount;
       return sC++;
     }
     //iterate over the columns less than n
     for(var col = 0; col < n; col++){
-
       //toggle the row/column we're at
       solution.togglePiece(row, col);
       //if there are NO Queen Conflicts
@@ -111,7 +106,6 @@ window.countNQueensSolutions = function(n) {
       }
       //else toggle piece
       solution.togglePiece(row, col);
-
     }
   }
   recurse(0);

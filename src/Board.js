@@ -88,8 +88,6 @@
 
        //if an index of array ===1
        if(curRow[i]===1){
-         //throw false
-        // console.log("I ran")
         count++;
        }
      }
@@ -108,7 +106,7 @@
         return true;
       }
     }
-      return false; // fixme
+      return false;
     },
 
 
@@ -155,7 +153,6 @@
       var count = 0;
       //set a variable equal to board rows
       var boardRows = this.rows();
-      //for the number of rows
       for(var i =0; i<boardRows.length; i++){
         if(boardRows[i][majorDiagonalColumnIndexAtFirstRow]===1){
           count++
@@ -167,9 +164,8 @@
         return true;
         //return true
       }else{
-      //else
       return false;
-      } // fixme
+      }
     },
 
     // test if any major diagonals on this board contain conflicts
@@ -192,7 +188,6 @@
     // test if a specific minor diagonal on this board contains a conflict
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
       //create counter var = 0
-
       var counter = 0;
       //create var for board values
       var boardRows = this.rows();
@@ -208,12 +203,10 @@
       } else {
         return false;
       }
-
     },
 
     // test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
-      // var count = 0;
       var boardRows = this.rows();
       var boardlength = (boardRows.length-1)*2;
 
@@ -222,7 +215,7 @@
           return true;
         }
       }
-      return false; // fixme
+      return false;
     },
 
     /*--------------------  End of Helper Functions  ---------------------*/
